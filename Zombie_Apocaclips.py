@@ -12,14 +12,10 @@ Should also work on mobile, it's just going to be really squished.
 Some places might not support the color coding & cleared screen,
 but this shouldn't detract from the main game.
 
-    * Github:
-        1. Go to https://github.com/Synrimon/Zombie_Apocalypse
-        2. Click "<> Code"
-        3. Choose "studious umbrella"
-        4. Click the play button (top right, by AI chat)
     * Code HS:
-        BEWARE -- > Code might be out dated slightly 
-        1. Go to https://codehs.com/sandbox/maroonarmadillo5402/zombie-apocaclips
+            1. Go to https://codehs.com/sandbox/maroonarmadillo5402/zombie-apocaclips
+            2. Hit the green "Run" button
+    
     * Online Python Interpreter:
         BEWARE -- > ANSI Escape stuff might not work. (colored txt, cleared screen, etc.)
         1. Copy ALL of this code
@@ -27,7 +23,13 @@ but this shouldn't detract from the main game.
         3. Choose one of the first two (not sponsored) links
         4. Click the left side and paste the code
         5. Press the "run" (or play) button 
-
+        
+    * VS Code:
+        1. Copy ALL of this code
+        2. Go to https://vscode.dev/ (VS Code website)
+        3. Select Python as the language
+        4. paste code in
+            install the Python API in extensions if needed
 ------- Play -------
 * Scrolling:
     Depending on where you're running this, you might have to
