@@ -14,8 +14,8 @@ but this shouldn't detract from the main game.
 
     * Github:
         1. Go to https://github.com/Synrimon/Zombie_Apocalypse
-        2. Click "<> Code"
-        3. Choose "studious umbrella"
+        2. 
+        3. 
         4. Click the play button (top right, by AI chat)
     * Code HS:
         BEWARE -- > Code might be out dated slightly 
@@ -71,29 +71,20 @@ import time
 
 # ------ Add-on ------
 
-def ansi_escape(command, dialogue=0, color=0):
-    def colored_text(colored, dialogue):
-        red = "ESC[38;5;31m"
-        orange = "ESC[38;5;208m"
-        yellow = "ESC[38;5;33m"
-        green = "ESC[38;5;32m"
-        blue = "ESC[38;5;34m"
-        purple = "ESC[38;5;93m"
-        ansi_color = f"ESC[38;5;{ID}m"
-        colored_ver = f"{color}{dialogue}{color}"
-    def clear():
-        print("clearing...")
-        time.sleep(3)
-        print("\033[H\033[2J")
-        return "cleared"
+    # --- ANSI Colors ---
+red = "ESC[38;5;31m"
+orange = "ESC[38;5;208m"
+yellow = "ESC[38;5;33m"
+green = "ESC[38;5;32m"
+blue = "ESC[38;5;34m"
+purple = "ESC[38;5;93m"
+    # --- ANSI Colors ---
 
-    # --- Routing ---
-    if command == "color":
-        colored_text(color)
-    elif command == "clear":
-        clear()
+def clear():
+    print("clearing...")
+    time.sleep(3)
+    print("\033[H\033[2J")
+    return "cleared"
     
-
-
 # ------ Add-on ------
 
