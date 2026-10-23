@@ -13,8 +13,8 @@ Some places might not support the color coding & cleared screen,
 but this shouldn't detract from the main game.
 
     * Code HS:
-            1. Go to https://codehs.com/sandbox/maroonarmadillo5402/zombie-apocaclips
-            2. Hit the green "Run" button
+        1. Go to https://codehs.com/sandbox/maroonarmadillo5402/zombie-apocaclips
+        2. Hit the green "Run" button
     
     * Online Python Interpreter:
         BEWARE -- > ANSI Escape stuff might not work. (colored txt, cleared screen, etc.)
@@ -27,8 +27,9 @@ but this shouldn't detract from the main game.
     * VS Code:
         1. Copy ALL of this code
         2. Go to https://vscode.dev/ (VS Code website)
-        3. Select Python as the language
-        4. paste code in
+        3. Create a file in .py
+        4. Select Python as the language
+        5. paste code in
             install the Python API in extensions if needed
 ------- Play -------
 * Scrolling:
@@ -87,6 +88,75 @@ def clear():
     time.sleep(3)
     print("\033[H\033[2J")
     return "cleared"
-    
+
+def dialog_spacing(dialog_here):
+    i = 0
+    for i in range(len(dialog_here)):
+        print(dialog_here[i])
+        time.sleep(4)
+        i += 1
+
 # ------ Add-on ------
 
+# ----- Save -----
+def saving():
+    #global (any & all inputs)
+    #save_code = f"100.200.300.400.500"
+    #save guide:
+        # . are seperators
+    pass
+
+# ----- Start -----
+
+print("""
+Welcome to Zombie Apocaclips -- A text-based Python story game!
+    A game by @Synrimon (github & hackclub)
+YOU are a promosing photographer caught up in mankind's greatest
+biological blunder: Zombies. Traverse a decaying world full of
+stories. 
+
+More parts of this game will be added on later C:
+
+""")
+
+for i in range(2):
+    print(" ")
+time.sleep(5)
+# ----- Start -----
+
+# ----- Story -----
+    # --- The Day Everything went Wrong
+clear()
+print("""-------The Day Everything went Wrong-------""")
+time.sleep(2)
+dialog1 = ["""
+
+It was late, the sun was setting. You were tinkering with your camera as
+everything turned to a dark purple in your room an emergency broadcast 
+drowned out all your passing thoughts. It lost you at 'diesease'.
+Not soon after you could hear commotion down the street.""", 
+""" 
+You get an unsettling chill as you approach your bedroom window, camera
+in hand. Peeking out through your closed blinds you see what everyone was
+screaming about: zombies. Something you'd never believe unless you saw it
+yourself.""",
+"""
+All you could think about was how crazy a photo of this would be. How you
+felt the urge to remember this day forever.
+""",
+"""
+So... you took a picture
+
+"""]
+dialog2 = ["Dialog here"]
+dialog_spacing(dialog1)
+
+print("      _______       _____      _____        _______        _____     ______ ")
+print("    /         \\    |     |    |     |     /         \\     |     |   /     / ")
+print("   |    ---    \\   |     |    |_____|    |    ---    \\    |     |  /     / ")
+print("   |   |   \\ ___\\  |     |     _____     |   |   \\ ___\\   |      V      / ")
+print("   |   |           |     |    |     |    |   |            |            / ")
+print("   |   |     ____  |     |    |     |    |   |     ____   |      ^     \\ ")
+print("   |    ____/   /  |     |    |     |    |    ____/   /   |     | \\     \\ ")
+print("   \\           /   |     |    |     |    \\           /    |     |  \\     \\ ")
+print("    -----------     -----     -------     -----------      -----    ------- ")
