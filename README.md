@@ -12,14 +12,14 @@ but this shouldn't detract from the main game.
     
     * Online Python Interpreter:
         BEWARE -- > ANSI Escape stuff might not work. (colored txt, cleared screen, etc.)
-        1. Copy ALL of this code
+        1. Copy ALL of game.py's code
         2. Search "Online Python Interpreter"
         3. Choose one of the first two (not sponsored) links
         4. Click the left side and paste the code
         5. Press the "run" (or play) button 
         
     * VS Code:
-        1. Copy ALL of this code
+        1. Copy ALL of game.py's code
         2. Go to https://vscode.dev/ (VS Code website)
         3. Create a file in .py
         4. Select Python as the language
