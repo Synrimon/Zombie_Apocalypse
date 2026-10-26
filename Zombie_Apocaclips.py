@@ -69,94 +69,145 @@ import time
     # Usage: 
             # defaults to seconds.
             # use time.sleep(seconds) function
+import re
+    # Usage:
+        # Meta Charas
+            # [] character set (ex: [a-c])
+            # * zero+ occurances
+            # + one+ occurances
+        # findall() ex: ("word", text)
 
 # ------ Imports -------
 
-# ------ Add-on ------
+# ------ Add-ons ------
 
     # --- ANSI Colors ---
-red = "ESC[38;5;31m"
-orange = "ESC[38;5;208m"
-yellow = "ESC[38;5;33m"
-green = "ESC[38;5;32m"
-blue = "ESC[38;5;34m"
-purple = "ESC[38;5;93m"
+red = "\033[31m"
+orange = "208"
+yellow = "33"
+green = "32"
+blue = "\033[34m"
+purple = "93"
     # --- ANSI Colors ---
 
 def clear():
-    print("clearing...")
     time.sleep(3)
     print("\033[H\033[2J")
     return "cleared"
 
-def dialog_spacing(dialog_here):
+def day_titling(title):
+    print(f"-------{title}-------")
+
+def dialogue_spacing(dialogue_here):
+    # takes a list/tuple
     i = 0
-    for i in range(len(dialog_here)):
-        print(dialog_here[i])
+    for i in range(len(dialogue_here)):
+        print(dialogue_here[i])
         time.sleep(4)
         i += 1
 
-# ------ Add-on ------
+# ------ Add-ons ------
 
 # ----- Save -----
-def saving():
+def saving(save_code):
+    saved = list(save_code)
     #global (any & all inputs)
-    #save_code = f"100.200.300.400.500"
+    #save_code = f"words:words, words:words"
     #save guide:
         # . are seperators
+    # maybe be a keyboard interrupt
     pass
+# ----- Save -----
+
+# ----- Inventory -----
+
+player_inv = {
+    "Item Slot 1" : "Empty",
+    "Item Slot 2" : "Empty",
+    "Item Slot 3" : "Empty",
+    "Item Slot 4" : "Empty",
+    "Item Slot 5" : "Empty",
+    "Item Slot 6" : "Empty",
+    "Item Slot 7" : "Empty"}
+
+# ----- Inventory -----
 
 # ----- Start -----
+try:
+    print(f"""
+    Welcome to Zombie Apocaclips -- A text-based Python story game!
+        A game by @Synrimon (github & hackclub)
+    YOU are a promosing photographer caught up in mankind's greatest
+    biological blunder: Zombies. Traverse a decaying world full of
+    stories. 
 
-print("""
-Welcome to Zombie Apocaclips -- A text-based Python story game!
-    A game by @Synrimon (github & hackclub)
-YOU are a promosing photographer caught up in mankind's greatest
-biological blunder: Zombies. Traverse a decaying world full of
-stories. 
+    More parts of this game will be added on later C:
 
-More parts of this game will be added on later C:
+    {blue}If you have a save code please interrupt this message.{blue}
+    """)
 
-""")
+    time.sleep(5)
+except KeyboardInterrupt:
+    pass
+# ----- Start -----
 
-for i in range(2):
+# ----- Story Parts -----
+    # --- The Day Everything went Wrong ---
+def episode_1(skip_value):
+    completion_values = ("Event", "Event", "Item") # < -- Pair with completion
+    completion = ["Event 1", "Event 2", ] # < -- Use a match case to match the values. I'm TIRED of coding if-elses bro.
+    global red
+    clear()
+    # ^--- Readying
+    day_titling("The Day Everything went Wrong")
+    time.sleep(2)
+    dialogue1 = (f"""
+
+    It was late, the sun was setting. You were tinkering with your camera as
+    everything turned to a dark purple in your room an emergency broadcast 
+    drowned out all your passing thoughts. It lost you at {red}'disease'{red}.
+    Not soon after you could hear commotion down the street.""", 
+    f""" 
+    You get an unsettling chill as you approach your bedroom window, camera
+    in hand. Peeking out through your closed blinds you see what everyone was
+    screaming about: {red}zombies{red}. Something you'd never believe unless you saw it
+    yourself.""",
+    """
+    All you could think about was how crazy a photo of this would be. How you
+    felt the urge to remember this day forever.
+    """,
+    """
+
+    So... you took a picture
+    """,
+    """
+        _______       _____      _____        _______        _____     ______ 
+        /         \\    |     |    |     |     /         \\     |     |   /     / 
+    |    ---    \\   |     |    |_____|    |    ---    \\    |     |  /     / 
+    |   |   \\ ___\\  |     |     _____     |   |   \\ ___\\   |      V      / 
+    |   |           |     |    |     |    |   |            |            / 
+    |   |     ____  |     |    |     |    |   |     ____   |      ^     \\ 
+    |    ____/   /  |     |    |     |    |    ____/   /   |     | \\     \\ 
+    \\           /   |     |    |     |    \\           /    |     |  \\     \\ 
+        -----------     -----     -------     -----------      -----    ------- 
+    """,
+    """
+    As you slide your camera down from your face you hear something from your front door.
+    It was faint, but still audbile from where you were.
+    """)
+    dialogue_spacing(dialogue1)
+    time.sleep(1.5)
+    for i in range(4):
+        print(f"{red} Thud.{red}")
+        time.sleep(1)
     print(" ")
-time.sleep(5)
-# ----- Start -----
 
-# ----- Story -----
-    # --- The Day Everything went Wrong
-clear()
-print("""-------The Day Everything went Wrong-------""")
-time.sleep(2)
-dialog1 = ["""
-
-It was late, the sun was setting. You were tinkering with your camera as
-everything turned to a dark purple in your room an emergency broadcast 
-drowned out all your passing thoughts. It lost you at 'diesease'.
-Not soon after you could hear commotion down the street.""", 
-""" 
-You get an unsettling chill as you approach your bedroom window, camera
-in hand. Peeking out through your closed blinds you see what everyone was
-screaming about: zombies. Something you'd never believe unless you saw it
-yourself.""",
-"""
-All you could think about was how crazy a photo of this would be. How you
-felt the urge to remember this day forever.
-""",
-"""
-So... you took a picture
-
-"""]
-dialog2 = ["Dialog here"]
-dialog_spacing(dialog1)
-
-print("      _______       _____      _____        _______        _____     ______ ")
-print("    /         \\    |     |    |     |     /         \\     |     |   /     / ")
-print("   |    ---    \\   |     |    |_____|    |    ---    \\    |     |  /     / ")
-print("   |   |   \\ ___\\  |     |     _____     |   |   \\ ___\\   |      V      / ")
-print("   |   |           |     |    |     |    |   |            |            / ")
-print("   |   |     ____  |     |    |     |    |   |     ____   |      ^     \\ ")
-print("   |    ____/   /  |     |    |     |    |    ____/   /   |     | \\     \\ ")
-print("   \\           /   |     |    |     |    \\           /    |     |  \\     \\ ")
-print("    -----------     -----     -------     -----------      -----    ------- ")
+# ----- Gameplay Order -----
+    # Episode list planner:
+        # Episode 1 : Entry into the apocalypse
+        # Episode 2 : Shutting in
+        # Episode 3 : Venturing out
+        # Episode 4 : Memories... maybe
+        # Episode 5
+        # Episode 6
+        # Episode 7
