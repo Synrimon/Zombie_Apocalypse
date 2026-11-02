@@ -13,7 +13,7 @@ Some places might not support the color coding & cleared screen,
 but this shouldn't detract from the main game.
 
     * Code HS:
-        1. Go to https://codehs.com/sandbox/maroonarmadillo5402/zombie-apocaclips-pt-2
+        1. Go to https://codehs.com/sandbox/maroonarmadillo5402/zombie-apocaclips-2
         2. Hit the green "Run" button
     
     * Online Python Interpreter:
