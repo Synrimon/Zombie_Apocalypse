@@ -1,5 +1,5 @@
 # Zombie_Apocalypse
-A mini text-based version of a bigger project I hope to work on. Here, you play as a promising photographer caught up in mankind's greatest blunder: zombies. Photograph the decay of the world, explore, and survive.
+A mini text-based version of a bigger project I hope to work on. This project was made entirely in a codespace, sorry if putting it in online editors doesn't work as inteneded, still trying to find a place where you can demo it no matter what. Here, you play as a promising photographer caught up in mankind's greatest blunder: zombies. Photograph the decay of the world, explore, and survive.
 
 How can you play this? Here's how!
 Should also work on mobile, it's just going to be really squished.
@@ -7,7 +7,7 @@ Some places might not support the color coding & clearing the screen,
 but this shouldn't detract from the main game.
 
     * Code HS:
-        1. Go to https://codehs.com/sandbox/maroonarmadillo5402/zombie-apocaclips
+        1. Go to [https://codehs.com/sandbox/maroonarmadillo5402/zombie-apocaclips](https://www.online-python.com/aGADO9EVKv)
         2. Hit the green "Run" button
     
     * Online Python Interpreter:
@@ -18,9 +18,9 @@ but this shouldn't detract from the main game.
         4. Click the left side and paste the code
         5. Press the "run" (or play) button 
         
-    * VS Code:
+    * Codespaces:
         1. Copy ALL of game.py's code
-        2. Go to https://vscode.dev/ (VS Code website)
+        2. Go to a codespace you use
         3. Create a file in .py
         4. Select Python as the language
         5. paste code in
